@@ -1,0 +1,51 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "me.meegan.springvue",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "5.8.1",
+    "applicationType": "monolith",
+    "baseName": "springvue",
+    "packageName": "me.meegan.springvue",
+    "packageFolder": "me/meegan/springvue",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "Zjk3NzNhZDU4MWM3ZGM1ZmYyYjkzOGI5NGQ3MDE3YWZhMWI3YjI3YmNiMWMwMzk5YTc1Nzc0MzgwYTBhY2Y1YjI1YmI4YWUwMjk1MjAwOTBhOTZmMTQ5Mzc1MzEzYzc1Y2Q2ZmU3ZGYwMGVjNTc4YWVhNGY0YmRlY2VmNWU2YTU=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-vuejs",
+        "version": "0.0.4"
+      }
+    ],
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "nativeLanguage": "en",
+    "languages": ["en"],
+    "blueprint": "generator-jhipster-vuejs",
+    "blueprintVersion": "0.0.4"
+  },
+  "generator-jhipster-vuejs": {
+    "jhipsterVersion": "5.8.1",
+    "applicationType": "monolith",
+    "baseName": "springvue",
+    "clientFramework": "vue",
+    "useSass": true,
+    "clientPackageManager": "npm"
+  }
+}
