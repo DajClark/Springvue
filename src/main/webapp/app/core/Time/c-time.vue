@@ -3,7 +3,7 @@
         <span class="alert alert-primary">The Time on the Server is: {{ getTime }}</span>
 
 
-        <button class="btn">Get Time!</button>
+        <button v-on:click="getCurrentTime" class="btn">Get Time!</button>
     </div>
 </template>
 
