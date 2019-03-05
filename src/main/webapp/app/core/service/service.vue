@@ -1,7 +1,7 @@
 <template>
     <div class="home row">
 
-        <div class="col-md-11 homes">
+        <div class="col-md-11 endpoints">
             <div>
                 <div class="alert alert-success" v-if="authenticated">
                     <span v-if="username" v-text="$t('home.logged.message', { 'username': username})">You are logged in as user "{{username}}"</span>
@@ -16,19 +16,38 @@
                     <router-link class="alert-link" to="/register" v-text="$t('global.messages.info.register.link')">Register a new account</router-link>
                 </div>
             </div>
+            <h1>Services</h1>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Server</th>
+                    <th>Details</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="table-success">
+                    <td>Meegan.me/8089</td>
+                    <td>Jakes Server</td>
+                    <td>Working</td>
+                </tr>
+                <tr class="table-danger">
+                    <td>192.168.0.222</td>
+                    <td>Pi Server</td>
+                    <td>Down</td>
+                </tr>
+                </tbody>
+            </table>
 
-            <c-time v-if="authenticated"></c-time>
-            <br>
-            <tasks v-if="authenticated"></tasks>
         </div>
     </div>
 </template>
 
-<script lang="ts" src="./home.component.ts">
+<script lang="ts" src="./service.component.ts">
 </script>
 
 <style scoped>
-    .homes {
+    .endpoints {
         margin-left: 160px;
     }
 </style>

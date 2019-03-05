@@ -7,6 +7,8 @@ Component.registerHooks([
 ]);
 import Router from 'vue-router';
 const Home = () => import('../core/home/home.vue');
+const Endpoint = () => import('../core/endpoint/endpoint.vue');
+const Service = () => import('../core/service/service.vue');
 const Error = () => import('../core/error/error.vue');
 const Register = () => import('../account/register/register.vue');
 const Activate = () => import('../account/activate/activate.vue');
@@ -134,6 +136,16 @@ export default new Router({
       name: 'JhiConfigurationComponent',
       component: JhiConfigurationComponent,
       meta: { authorities: ['ROLE_ADMIN'] }
+    },
+    {
+      path: '/configure/service',
+      name: 'Endpoint',
+      component: Service
+    },
+    {
+      path: '/configure/endpoint',
+      name: 'Endpoint',
+      component: Endpoint
     }
     // jhipster-needle-add-entity-to-router - JHipster will add entities to the router here
   ]

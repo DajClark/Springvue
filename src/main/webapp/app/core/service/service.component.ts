@@ -1,14 +1,9 @@
 import Component from 'vue-class-component';
 import { Inject, Vue } from 'vue-property-decorator';
 import LoginModalService from '@/account/login-modal.service';
-import CTime from '@/core/Time/c-time.vue';
-import Tasks from '@/core/Tasks/tasks.vue';
 
 @Component({
-  components: {
-    'c-time': CTime,
-    tasks: Tasks
-  }
+  components: {}
 })
 export default class Home extends Vue {
   @Inject('loginModalService')
