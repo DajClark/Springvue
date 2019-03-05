@@ -1,4 +1,5 @@
 <template>
+    <nav>
     <b-navbar toggleable="md" type="dark" class="jh-navbar">
         <div class="jh-logo-container float-left">
             <b-navbar-toggle right class="jh-navbar-toggler d-lg-none float-right" href="javascript:void(0);"  data-toggle="collapse" target="header-tabs" aria-expanded="false" aria-label="Toggle navigation">
@@ -121,6 +122,13 @@
             </b-navbar-nav>
         </b-collapse>
     </b-navbar>
+        <div v-if="authenticated" type="dark" class="sidenav">
+            <a href="/#/configure/service">Services</a>
+            <a href="/#/configure/endpoint">Endpoints</a>
+            <a href="/#/Database">Database</a>
+            <a href="/#/Clients">Clients</a>
+        </div>
+    </nav>
 </template>
 
 <script lang="ts" src="./jhi-navbar.component.ts">
@@ -137,6 +145,7 @@
 }
 
 .jh-navbar {
+
   background-color: #353d47;
   padding: 0.2em 1em;
 }
@@ -233,4 +242,36 @@ nav li.router-link-active .navbar-dropdown-menu {
   background-size: contain;
   width: 100%;
 }
+
+/* ==========================================================================
+SideBar styles
+========================================================================== */
+
+.sidenav {
+    position: absolute;
+
+    margin-top: 62px;
+    height: 100%;
+    width: 160px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #353d47;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-top: 5px solid lightblue;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
 </style>

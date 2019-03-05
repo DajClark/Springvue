@@ -1,7 +1,7 @@
 <template>
-    <div class="home row">
+    <div class="endpoint row">
 
-        <div class="col-md-11 homes">
+        <div class="col-md-11 endpoints">
             <div>
                 <div class="alert alert-success" v-if="authenticated">
                     <span v-if="username" v-text="$t('home.logged.message', { 'username': username})">You are logged in as user "{{username}}"</span>
@@ -17,18 +17,19 @@
                 </div>
             </div>
 
-            <c-time v-if="authenticated"></c-time>
+            <h1>Endpoints</h1>
             <br>
-            <tasks v-if="authenticated"></tasks>
+            <endpoints></endpoints>
         </div>
+
     </div>
 </template>
 
-<script lang="ts" src="./home.component.ts">
+<script lang="ts" src="./endpoint.component.ts">
 </script>
 
 <style scoped>
-    .homes {
+    .endpoints {
         margin-left: 160px;
     }
 </style>

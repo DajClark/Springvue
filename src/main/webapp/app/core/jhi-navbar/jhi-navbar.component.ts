@@ -1,5 +1,4 @@
 import { Component, Inject, Vue } from 'vue-property-decorator';
-import axios from 'axios';
 import { VERSION } from '@/constants';
 import LoginModalService from '@/account/login-modal.service';
 
